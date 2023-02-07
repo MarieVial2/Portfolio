@@ -1,0 +1,46 @@
+Présentation :
+
+Salut ! Moi, c'est Marie, et suite à une reconversion récente, je suis devenue développeuse. Issue des sciences du langage et de l'accompagnement éducatif, j'ai entrepris une formation de développeur web et web mobile et je suis désormais titulaire de ce titre équivalent à un bac+2. Pour mieux me connaitre, j'aime le grand-air et la marche est l'une de mes activités principales. A côté de cela, je suis très intéressée par les langues étrangères et la musique, de la recherche biographique à la simple écoute. Je fais partie d'une association d'astronomie, Planète Sciences ! J'y fais du bénévolat. Enfin, j'aime beaucoup l'écriture créative et j'organise régulièrement des ateliers d'écriture. N'hésitez pas à me contacter !
+
+------------------------------
+
+TECHNOLOGIES :
+INSERT INTO `technologie`(`nom_technologie`, `logo_technologie`) 
+VALUES 
+('HTML5','<i class="fa-brands fa-html5"></i>'),
+('CSS3','<i class="fa-brands fa-css3-alt"></i>'),
+('JavaScript','<i class="fa-brands fa-square-js"></i>'),
+('Bootstrap','<i class="fa-brands fa-bootstrap"></i>'),
+('PHP','<i class="fa-brands fa-php"></i>'),
+('Symfony','<i class="fa-brands fa-symfony"></i>')
+
+
+-------------------------------------
+
+REALISATIONS :
+
+INSERT INTO `realisation`(`titre_realisation`, `description_realisation`) 
+VALUES ('Site du Bagad d\'Orvault','Site vitrine avec une partie back-end en Symfony'),
+('Ce portfolio','One-page pour me présenter et présenter mes travaux, vous vous y trouvez ;)'),
+('TP Mini-boutique','Un site effectué en formation pour un TP en PHP à l\'aide du PDO'),
+('TP Omnisport','Un site effectué en formation pour un TP en PHP à l\'aide du PDO')
+
+-------------------------------------
+Compétences
+INSERT INTO `competence`( `nom_competence`, `description_competence`) VALUES 
+('Compétences rédactionnelles','J\'ai déjà rédigé un mémoire lors de mes études'),
+('Polyvalence','Je m\'épanouis dans la variété de tâches à accomplir'),
+('Autonomie','Je sais chercher par mes propres moyens'),
+('Travail en équipe','J\'ai travaillé de nombreuses fois en équipe et dans des domaines variés'),
+('Esprit d\'entraide','L\'autonomie oui, mais pas aux dépends d\'une entraide au sein de l\'équipe')
+
+---------------------------------------
+
+Experiences
+
+INSERT INTO `experience`(`intitule_experience`, `date_debut`, `date_fin`, `missions_experience`, `etablissement_experience`) 
+VALUES ('Licence Sciences du Langage','','2014','','Université Lyon II'),
+('Master didactique des langues et FLE','','2016','','Université de Savoie Mont-Blanc'),
+('Missions d\'accompagnement éducatif','2016','2022','Missions d\'aide aux devoirs, de soutien scolaire, de coaching pour adolescents; poste d\'AESH','Acadomia/Secteur public'),
+('Titre de Développeur Web et Web Mobile','Octobre 2022','Avril 2023','','Arinfo, Nantes'),
+('Stage en agence web','Mars 2023','Avril 2023','','')
