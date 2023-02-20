@@ -5,7 +5,7 @@ body {
 }
 
 nav {
-  background-color: rgba(254, 244, 209, 0.808);
+  background-color: rgba(255, 251, 234, 0.808);
   height: 110px;
   font-family: "Quicksand";
   position: fixed;
@@ -71,10 +71,11 @@ h3 {
 }
 
 #encart-presentation {
-  background-color: rgba(250, 234, 177, 0.671);
+  background-color: rgba(255, 245, 208, 0.482);
   border-radius: 15px;
   padding: 20px;
-  box-shadow: 5px 5px 20px rgb(163, 163, 163);
+  box-shadow: 5px 5px 20px rgb(207, 207, 207);
+  margin: 100px 0;
 }
 #encart-presentation #presentation-texte {
   padding: 20px;
@@ -135,7 +136,7 @@ h3 {
     TIMELINE
 ==================================*/
 /*-- GENERAL STYLES
-------------------------------*/
+    ------------------------------*/
 .timeline {
   line-height: 1.4em;
   list-style: none;
@@ -143,7 +144,12 @@ h3 {
   padding: 0;
   width: 100%;
 }
-.timeline h1, .timeline h2, .timeline h3, .timeline h4, .timeline h5, .timeline h6 {
+.timeline h1,
+.timeline h2,
+.timeline h3,
+.timeline h4,
+.timeline h5,
+.timeline h6 {
   line-height: inherit;
 }
 
@@ -247,8 +253,8 @@ h3 {
 }
 
 /*----------------------------------------------
-    MOD: TIMELINE SPLIT
-----------------------------------------------*/
+        MOD: TIMELINE SPLIT
+    ----------------------------------------------*/
 @media (min-width: 768px) {
   .timeline-split .timeline, .timeline-centered .timeline {
     display: table;
@@ -258,11 +264,11 @@ h3 {
     padding: 0;
   }
   .timeline-split .timeline-info, .timeline-centered .timeline-info,
-.timeline-split .timeline-marker,
-.timeline-centered .timeline-marker,
-.timeline-split .timeline-content,
-.timeline-centered .timeline-content,
-.timeline-split .period .timeline-info {
+  .timeline-split .timeline-marker,
+  .timeline-centered .timeline-marker,
+  .timeline-split .timeline-content,
+  .timeline-centered .timeline-content,
+  .timeline-split .period .timeline-info {
     display: table-cell;
     vertical-align: top;
   }
@@ -282,14 +288,14 @@ h3 {
 }
 
 /*----------------------------------------------
-    MOD: TIMELINE CENTERED
-----------------------------------------------*/
+        MOD: TIMELINE CENTERED
+    ----------------------------------------------*/
 @media (min-width: 992px) {
   .timeline-centered,
-.timeline-centered .timeline-item,
-.timeline-centered .timeline-info,
-.timeline-centered .timeline-marker,
-.timeline-centered .timeline-content {
+  .timeline-centered .timeline-item,
+  .timeline-centered .timeline-info,
+  .timeline-centered .timeline-marker,
+  .timeline-centered .timeline-content {
     display: block;
     margin: 0;
     padding: 0;
@@ -304,7 +310,7 @@ h3 {
     margin-left: -7.5px;
   }
   .timeline-centered .timeline-info,
-.timeline-centered .timeline-content {
+  .timeline-centered .timeline-content {
     width: 50%;
   }
   .timeline-centered > .timeline-item:nth-child(odd) .timeline-info {
@@ -347,12 +353,207 @@ h3 {
 }
 
 /*----------------------------------------------
-    MOD: MARKER OUTLINE
-----------------------------------------------*/
+        MOD: MARKER OUTLINE
+    ----------------------------------------------*/
 .marker-outline .timeline-marker:before {
   background: transparent;
   border-color: #FF6B6B;
 }
 .marker-outline .timeline-item:hover .timeline-marker:before {
   background: #FF6B6B;
+}
+
+#realisations {
+  background-color: rgba(255, 245, 208, 0.482);
+  padding: 10px;
+  margin: 100px 0;
+}
+
+.item-realisations {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin: 20px;
+  text-shadow: 0 0 1px rgb(34, 34, 34);
+  padding: 20px;
+  background-position: center;
+  background-size: cover;
+  transition: all 0.5s;
+  filter: saturate(25%) brightness(50%);
+}
+.item-realisations p {
+  text-align: center;
+  font-size: 14px;
+}
+.item-realisations p i {
+  font-size: 25px;
+  margin: 10px;
+}
+
+.item-realisations:hover {
+  transform: scale(1.1);
+  filter: saturate(100%) brightness(100%);
+}
+
+#competences {
+  background-color: rgba(255, 245, 208, 0.482);
+  padding: 20px;
+  margin: 100px 0;
+  margin: 60px 0;
+}
+#competences h3 {
+  border: none;
+}
+
+#bloc-competences {
+  padding-left: 30px;
+  border-left: 1px solid rgb(34, 34, 34);
+}
+
+#bloc-technologies {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  text-align: right;
+}
+#bloc-technologies i {
+  font-size: 50px;
+  transition: all 1s;
+}
+#bloc-technologies i:hover {
+  color: rgb(152, 152, 152);
+}
+
+.techno-item {
+  text-align: center;
+  margin: 20px;
+  width: 100px;
+}
+
+#contact {
+  margin: 100px 0;
+}
+#contact h3 {
+  border: none;
+}
+
+form {
+  background-color: rgba(255, 245, 208, 0.482);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 20px rgb(207, 207, 207);
+}
+
+input {
+  border: none;
+  border-bottom: 1px solid rgb(34, 34, 34);
+  border-radius: 50px;
+  margin: 20px;
+  width: 90%;
+  padding: 5px;
+}
+
+input::-moz-placeholder {
+  font-family: "Montserrat";
+  font-size: 12px;
+}
+
+input::placeholder {
+  font-family: "Montserrat";
+  font-size: 12px;
+}
+
+input:focus {
+  border: 2px solid rgb(193, 193, 193);
+  outline: none;
+}
+
+textarea {
+  width: 90%;
+  height: 100%;
+  border: none;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+textarea:focus {
+  border: 2px solid rgb(193, 193, 193);
+  outline: none;
+}
+
+textarea::-moz-placeholder {
+  font-family: "Montserrat";
+  font-size: 12px;
+}
+
+textarea::placeholder {
+  font-family: "Montserrat";
+  font-size: 12px;
+}
+
+#body-form {
+  height: 350px;
+  margin-top: 30px;
+}
+
+footer {
+  background-color: rgb(34, 34, 34);
+  color: white;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+footer a {
+  color: white;
+  transition: all 1s;
+}
+footer a i {
+  font-size: 30px;
+  margin: 0 15px;
+}
+footer a:hover {
+  color: rgb(152, 152, 152);
+}
+
+#footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#copyrights p {
+  text-align: center;
+  font-size: 11px;
+}
+
+#header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(34, 34, 34);
+  height: 60px;
+  color: white;
+}
+#header a {
+  color: white;
+  text-decoration: none;
+}
+
+#conteneur {
+  display: flex;
+  width: 100%;
+}
+
+#aside {
+  width: 20vw;
+  height: 100%;
+  background-color: rgb(34, 34, 34);
+  color: white;
+}
+#aside a {
+  color: white;
 }/*# sourceMappingURL=style.css.map */

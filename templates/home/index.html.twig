@@ -22,25 +22,25 @@ Some spans to act as a hamburger.
 the menu has to be inside of the button
 -->
         <ul id="menu">
-            <li><a href="#" >
-                Présentation
-            </a></li>
+            <li><a href="#presentation">
+                    Présentation
+                </a></li>
 
-            <li><a href="#" >
-                Parcours
-            </a></li>
+            <li><a href="#parcours">
+                    Parcours
+                </a></li>
 
-            <li><a href="#" >
-                Réalisations
-            </a></li>
-            
-            <li><a href="#" >
-                Compétences
-            </a></li>
-            
-            <li><a href="#" >
-                Contact
-            </a></li>
+            <li><a href="#realisations">
+                    Réalisations
+                </a></li>
+
+            <li><a href="#competences">
+                    Compétences
+                </a></li>
+
+            <li><a href="#contact">
+                    Contact
+                </a></li>
         </ul>
     </div>
 
@@ -53,25 +53,25 @@ the menu has to be inside of the button
 
         <div id="nav">
             <ul>
-                <li><a href="#" >
-                    Présentation
-                </a></li>
-    
-                <li><a href="#" >
-                    Parcours
-                </a></li>
-    
-                <li><a href="#" >
-                    Réalisations
-                </a></li>
-                
-                <li><a href="#" >
-                    Compétences
-                </a></li>
-                
-                <li><a href="#" >
-                    Contact
-                </a></li>
+                <li><a href="#presentation">
+                        Présentation
+                    </a></li>
+
+                <li><a href="#parcours">
+                        Parcours
+                    </a></li>
+
+                <li><a href="#realisations">
+                        Réalisations
+                    </a></li>
+
+                <li><a href="#competences">
+                        Compétences
+                    </a></li>
+
+                <li><a href="#contact">
+                        Contact
+                    </a></li>
             </ul>
         </div>
 
@@ -79,31 +79,37 @@ the menu has to be inside of the button
 </nav>
 
 <header>
-    <div><h2>Développeuse
-        <span
-           class="txt-rotate"
-           data-period="2000"
-           data-rotate='[ " front-end.", " back-end.", " web."]'></span>
-      </h2>
+    <div>
+        <h2>Développeuse
+            <span class="txt-rotate" data-period="2000" data-rotate='[ " front-end.", " back-end.", " web."]'></span>
+        </h2>
     </div>
 </header>
 
 <section id="presentation">
-    <div class="container m-5">
+    <div class="container d-flex justify-content-center">
         <div id="encart-presentation">
             <h3>Présentation</h3>
             <div class="row">
                 <div class="col-md-6">
-                    <img src="" alt="photo Marie Vial">
+                    <img src="" alt="photo développement web">
                 </div>
                 <div class="col-md-6">
                     <div id="presentation-texte">
-                        <p>Salut ! Moi, c'est Marie, et suite à une reconversion récente, je suis devenue développeuse. Issue des sciences du langage et de l'accompagnement éducatif, j'ai entrepris une formation de développeur web et web mobile et je suis désormais titulaire de ce titre équivalent à un bac+2. Pour mieux me connaitre, j'aime le grand-air et la marche est l'une de mes activités principales. A côté de cela, je suis très intéressée par les langues étrangères et la musique, de la recherche biographique à la simple écoute. Je fais partie d'une association d'astronomie, Planète Sciences ! J'y fais du bénévolat. Enfin, j'aime beaucoup l'écriture créative et j'organise régulièrement des ateliers d'écriture. N'hésitez pas à me contacter !</p>
+                        <p>Salut ! Moi, c'est Marie, et suite à une reconversion récente, je suis devenue développeuse.
+                            Issue des sciences du langage et de l'accompagnement éducatif, j'ai entrepris une formation
+                            de développeur web et web mobile et je suis désormais titulaire de ce titre équivalent à un
+                            bac+2. Pour mieux me connaitre, j'aime le grand-air et la marche est l'une de mes activités
+                            principales. A côté de cela, je suis très intéressée par les langues étrangères et la
+                            musique, de la recherche biographique à la simple écoute. Je fais partie d'une association
+                            d'astronomie, Planète Sciences ! J'y fais du bénévolat. Enfin, j'aime beaucoup l'écriture
+                            créative et j'organise régulièrement des ateliers d'écriture. N'hésitez pas à me contacter !
+                        </p>
 
                         <a class="btn btn-outline-dark" href="#contact" role="button">Me contacter</a>
                     </div>
                 </div>
-            
+
             </div>
 
         </div>
@@ -116,68 +122,30 @@ the menu has to be inside of the button
     <div id="timeline-bloc">
         <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
             <ul class="timeline timeline-centered">
+                {% for experience in experiences %}
                 <li class="timeline-item">
                     <div class="timeline-info">
-                        <span>March 12, 2016</span>
+                        <span>{{ experience.dateDebut }} - {{ experience.dateFin }}</span>
                     </div>
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <h5 class="timeline-title">Event Title</h5>
-                        <p>Nullam vel sem. Nullam vel sem. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Donec vitae sapien ut libero venenatis faucibus. ullam dictum felis
-                            eu pede mollis pretium. Pellentesque ut neque.</p>
+                        <h5 class="timeline-title">{{ experience.intituleExperience }}</h5>
+                        <p>{{ experience.missionsExperience }}</p>
                     </div>
                 </li>
-                <li class="timeline-item">
-                    <div class="timeline-info">
-                        <span>March 12, 2016</span>
-                    </div>
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h5 class="timeline-title">Event Title</h5>
-                        <p>Nullam vel sem. Nullam vel sem. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Donec vitae sapien ut libero venenatis faucibus. ullam dictum felis
-                            eu pede mollis pretium. Pellentesque ut neque.</p>
-                    </div>
-                </li>
-                <li class="timeline-item">
-                    <div class="timeline-info">
-                        <span>March 23, 2016</span>
-                    </div>
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h5 class="timeline-title">Event Title</h5>
-                        <p>Nullam vel sem. Nullam vel sem. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Donec vitae sapien ut libero venenatis faucibus. ullam dictum felis
-                            eu pede mollis pretium. Pellentesque ut neque. </p>
-                    </div>
-                </li>
-                <li class="timeline-item period">
+
+                {% endfor %}
+
+
+                <!-- <li class="timeline-item period">
                     <div class="timeline-info"></div>
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <h4 class="timeline-title">April 2016</h4>
                     </div>
-                </li>
-                <li class="timeline-item">
-                    <div class="timeline-info">
-                        <span>April 02, 2016</span>
-                    </div>
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h5 class="timeline-title">Event Title</h5>
-                        <p>Nullam vel sem. Nullam vel sem. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Donec vitae sapien ut libero venenatis faucibus. ullam dictum felis
-                            eu pede mollis pretium. Pellentesque ut neque. </p>
-                    </div>
-                </li>
-                <li class="timeline-item">
-                    <div class="timeline-info">
-                        <span>April 28, 2016</span>
-                    </div>
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h5 class="timeline-title">Event Title</h5>
-                        <p>Nullam vel sem. Nullam vel sem. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Donec vitae sapien ut libero venenatis faucibus. ullam dictum felis
-                            eu pede mollis pretium. Pellentesque ut neque. </p>
-                    </div>
-                </li>
+                </li> -->
+
+
             </ul>
         </div>
 
@@ -185,4 +153,119 @@ the menu has to be inside of the button
     </div>
 
 </section>
+
+
+<section id="realisations">
+    <div class="container ">
+        <h3>Mes réalisations</h3>
+        <div id="item-display" class="row">
+
+            <div class="col-md-4">
+                <div class="item-realisations" style="background-image: url('{{asset('images/header.jpg')}}')">
+                    <h6>Site du bagad</h6>
+                    <p>site vitrine</p>
+                    <p><i class="fa-brands fa-elementor"></i><i class="fa-brands fa-elementor"></i></p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="competences">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Technologies</h3>
+                <div id="bloc-technologies">
+
+
+                    {% for technologie in technologies %}
+                    <div class="techno-item">
+                        <div>{{ technologie.logoTechnologie|raw }}</div>
+                        <div>{{ technologie.nomTechnologie }}</div>
+
+                    </div>
+                    {% endfor %}
+
+
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h3>Compétences</h3>
+                <div id="bloc-competences">
+
+                    <ul>
+                        {% for competence in competences %}
+                        <li><em>{{ competence.nomCompetence }} : </em>{{ competence.descriptionCompetence }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<section id="contact">
+    <div class="container">
+        <h3>Contact</h3>
+        {{ form_start(form) }}
+        <div class="row" id="body-form">
+
+            <div class="col-md-6">
+                <div class="form-group">
+
+                    {{ form_widget(form.nomContact)}}
+                </div>
+                <div class="form-group">
+
+                    {{ form_widget(form.prenomContact)}}
+                </div>
+                <div class="form-group">
+
+                    {{ form_widget(form.emailContact)}}
+                </div>
+                <div class="form-group">
+
+                    {{ form_widget(form.telephoneContact)}}
+                </div>
+            </div>
+
+
+            <div class="col-md-6">
+
+
+                {{ form_widget(form.contenuContact)}}
+            </div>
+
+
+            {{ form_widget(form) }}
+
+
+
+        </div>
+        <div class="d-flex justify-content-center">
+            <button class="btn btn-outline-dark">{{ button_label|default('Envoyer') }}</button>
+        </div>
+        {{ form_end(form) }}
+
+    </div>
+</section>
+
+<footer>
+
+    <div id="footer">
+        <h6>Retrouvez-moi sur :</h6>
+        <p> <a href=""><i class="fa-brands fa-linkedin"></i></a> <a href=""><i
+                    class="fa-brands fa-square-github"></i></a></p>
+    </div>
+
+    <div id="copyrights">
+        <p>© Copyright 2022 - Marie VIAL. Tous droits réservés.</p>
+    </div>
+
+</footer>
 {% endblock %}

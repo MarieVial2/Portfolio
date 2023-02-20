@@ -28,6 +28,9 @@ class Realisation
     #[ORM\ManyToMany(targetEntity: Technologie::class, mappedBy: 'realisations')]
     private Collection $technologies;
 
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $imageRealisation = null;
+
     public function __construct()
     {
         $this->technologies = new ArrayCollection();
@@ -97,6 +100,18 @@ class Realisation
         if ($this->technologies->removeElement($technology)) {
             $technology->removeRealisation($this);
         }
+
+        return $this;
+    }
+
+    public function getImageRealisation(): ?string
+    {
+        return $this->imageRealisation;
+    }
+
+    public function setImageRealisation(?string $imageRealisation): self
+    {
+        $this->imageRealisation = $imageRealisation;
 
         return $this;
     }

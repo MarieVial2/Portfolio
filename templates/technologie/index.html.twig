@@ -1,37 +1,37 @@
-{% extends 'base.html.twig' %}
+{% extends 'baseAdmin.html.twig' %}
 
 {% block title %}Technologie index{% endblock %}
 
 {% block body %}
-    <h1>Technologie index</h1>
+<h1>Technologie index</h1>
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>NomTechnologie</th>
-                <th>LogoTechnologie</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>NomTechnologie</th>
+            <th>LogoTechnologie</th>
+            <th>actions</th>
+        </tr>
+    </thead>
+    <tbody>
         {% for technologie in technologies %}
-            <tr>
-                <td>{{ technologie.id }}</td>
-                <td>{{ technologie.nomTechnologie }}</td>
-                <td>{{ technologie.logoTechnologie }}</td>
-                <td>
-                    <a href="{{ path('app_technologie_show', {'id': technologie.id}) }}">show</a>
-                    <a href="{{ path('app_technologie_edit', {'id': technologie.id}) }}">edit</a>
-                </td>
-            </tr>
+        <tr>
+            <td>{{ technologie.id }}</td>
+            <td>{{ technologie.nomTechnologie }}</td>
+            <td>{{ technologie.logoTechnologie }}</td>
+            <td>
+                <a href="{{ path('app_technologie_show', {'id': technologie.id}) }}">show</a>
+                <a href="{{ path('app_technologie_edit', {'id': technologie.id}) }}">edit</a>
+            </td>
+        </tr>
         {% else %}
-            <tr>
-                <td colspan="4">no records found</td>
-            </tr>
+        <tr>
+            <td colspan="4">no records found</td>
+        </tr>
         {% endfor %}
-        </tbody>
-    </table>
+    </tbody>
+</table>
 
-    <a href="{{ path('app_technologie_new') }}">Create new</a>
+<a href="{{ path('app_technologie_new') }}">Create new</a>
 {% endblock %}

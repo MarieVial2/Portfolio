@@ -1,0 +1,32 @@
+<div class="row">
+    {{ form_start(form) }}
+    <div class="col-md-6">
+        <div class="form-group">
+            {{ form_label(form.nomContact)}}
+            {{ form_widget(form.nomContact)}}
+        </div>
+        <div class="form-group">
+            {{ form_label(form.prenomContact)}}
+            {{ form_widget(form.prenomContact)}}
+        </div>
+        <div class="form-group">
+            {{ form_label(form.emailContact)}}
+            {{ form_widget(form.emailContact)}}
+        </div>
+    </div>
+
+
+    <div class="col-md-6">
+
+        {{ form_label(form.contenuContact)}}
+        {{ form_widget(form.contenuContact)}}
+    </div>
+
+
+    {{ form_widget(form) }}
+
+
+
+</div>
+<button class="btn btn-outline-dark">{{ button_label|default('Envoyer') }}</button>
+{{ form_end(form) }}

@@ -10,7 +10,6 @@
   z-index: 3;
   -webkit-user-select: none;
   -moz-user-select: none;
-   -ms-user-select: none;
        user-select: none;
 }
 
@@ -32,8 +31,10 @@
   top: -7px;
   left: -5px;
   cursor: pointer;
-  opacity: 0; /* hide this */
-  z-index: 6; /* and place it over the hamburger */
+  opacity: 0;
+  /* hide this */
+  z-index: 6;
+  /* and place it over the hamburger */
   -webkit-touch-callout: none;
 }
 
@@ -115,4 +116,9 @@
  */
 #menuToggle input:checked ~ ul {
   transform: none;
+}
+
+#bloc-competences {
+  padding-left: 0;
+  border-left: none;
 }/*# sourceMappingURL=style-750.css.map */
